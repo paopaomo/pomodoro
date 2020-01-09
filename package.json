@@ -1,0 +1,22 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "a demo of electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paopaomo/pomodoro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paopaomo/pomodoro/issues"
+  },
+  "homepage": "https://github.com/paopaomo/pomodoro#readme",
+  "devDependencies": {
+    "electron": "^7.1.8"
+  }
+}
