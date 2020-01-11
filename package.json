@@ -21,6 +21,7 @@
     "electron": "^7.1.8"
   },
   "dependencies": {
+    "progressbar.js": "^1.1.0",
     "timer.js": "^1.0.4"
   }
 }
