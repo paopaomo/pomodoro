@@ -6,9 +6,34 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #app {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #timer-container {
+            width: 200px;
+            height: 200px;
+        }
+        #control-button {
+            display: flex;
+            justify-content: center;
+            background-color: #ED6A59;
+            border-radius: 10px;
+            color: #ffffff;
+            padding: 5px 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<div id="timer-container"></div>
+<div id="app">
+    <div id="timer-container"></div>
+    <div id="control-button"></div>
+</div>
+
 <script src="./renderer.js"></script>
 </body>
 </html>
