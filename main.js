@@ -1,37 +1,44 @@
 const { app, BrowserWindow, Notification, ipcMain } = require('electron');
 
+let mainWindow;
+
 const handleIPC = () => {
-    ipcMain.handle('work-notification', () => {
+    ipcMain.handle('notification', (e, data) => {
         return new Promise((resolve, reject) => {
+            const { title, body, confirmButtonText, cancelButtonText } = data;
             const notification = new Notification({
-                title: '任务结束',
-                body: '是否开始休息',
+                title,
+                body,
                 actions: [{
-                    text: '开始休息',
+                    text: confirmButtonText,
                     type: 'button'
                 }],
-                closeButtonText: '继续工作'
+                closeButtonText: cancelButtonText
             });
             notification.show();
             notification.on('action', () => {
-                resolve('rest');
+                resolve({ event: 'action' });
             });
             notification.on('close', () => {
-                resolve('work');
+                resolve({ event: 'close' });
             });
         });
     })
 };
 
-let win;
-app.on('ready', () => {
-    win = new BrowserWindow({
+const createMainWindow = () => {
+    mainWindow = new BrowserWindow({
         width: 300,
         height: 300,
         webPreferences: {
             nodeIntegration: true
         }
     });
-    win.loadFile('index.html');
+    mainWindow.loadFile('./index.html');
+    return mainWindow;
+};
+
+app.whenReady().then(() => {
+    createMainWindow();
     handleIPC();
 });
