@@ -17,10 +17,8 @@
     "url": "https://github.com/paopaomo/pomodoro/issues"
   },
   "homepage": "https://github.com/paopaomo/pomodoro#readme",
-  "devDependencies": {
-    "electron": "^7.1.8"
-  },
   "dependencies": {
+    "electron": "^7.1.8",
     "progressbar.js": "^1.1.0",
     "timer.js": "^1.0.4"
   }
