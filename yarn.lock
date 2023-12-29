@@ -419,6 +419,11 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
+fsevents@^2.3.2:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -632,6 +637,11 @@ lodash.get@^4.0.0:
   resolved "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
 lodash@^4.17.10:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -833,12 +843,13 @@ progress@^2.0.3:
   resolved "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-progressbar.js@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/progressbar.js/-/progressbar.js-1.1.0.tgz#300f99be40ba93fb0867f91dff01771236cade70"
-  integrity sha512-K68/xcyXKo2I6T3PfIkXrRaycxROmWeU4bugb49iulWR25cU94PM0cfZ47S0jDhG5K3vPhZwCOy1fgb5Pgh6UQ==
+progressbar.js@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/progressbar.js/-/progressbar.js-1.1.1.tgz#8c7dc52ce4cc8845c4f3055da75afc366a0543e9"
+  integrity sha512-FBsw3BKsUbb+hNeYfiP3xzvAAQrPi4DnGDw66bCmfuRCDLcslxyxv2GyYUdBSKFGSIBa73CUP5WMcl6F8AAXlw==
   dependencies:
-    shifty "^2.1.2"
+    lodash.merge "^4.6.2"
+    shifty "^2.8.3"
 
 proto-list@~1.2.1:
   version "1.2.4"
@@ -970,10 +981,12 @@ serialize-error@^7.0.1:
   dependencies:
     type-fest "^0.13.1"
 
-shifty@^2.1.2:
-  version "2.15.2"
-  resolved "https://registry.npmjs.org/shifty/-/shifty-2.15.2.tgz#be74f83b5494708ca5531c3725027a0b51d1dc3d"
-  integrity sha512-uaDIdYXrOGncvPula4Pi2jl7kv46IwvZ10AYBSGsl/vrvclOXqzMWOAQCgDjNR7LVPgQki0CTtOMJOH9gnJgsg==
+shifty@^2.8.3:
+  version "2.20.4"
+  resolved "https://registry.yarnpkg.com/shifty/-/shifty-2.20.4.tgz#fb2ec81697b808b250024fa9548b5b93fadd78cf"
+  integrity sha512-4Y0qRkg8ME5XN8yGNAwmFOmsIURGFKT9UQfNL6DDJQErYtN5HsjyoBuJn41ZQfTkuu2rIbRMn9qazjKsDpO2TA==
+  optionalDependencies:
+    fsevents "^2.3.2"
 
 spdx-correct@^3.0.0:
   version "3.1.1"
